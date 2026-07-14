@@ -119,4 +119,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  // ----- CONTACT FORM — EMAIL SUBMISSION (Formspree) -----
+  const contactForm = document.getElementById('contactForm');
+  const formFeedback = document.getElementById('formFeedback');
+  const submitBtn = document.getElementById('formSubmitBtn');
+  const btnText = submitBtn?.querySelector('.btn-text');
+  const btnLoader = submitBtn?.querySelector('.btn-loader');
+
+  if (contactForm && formFeedback && submitBtn) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Show loading state
+      submitBtn.disabled = true;
+      if (btnText) btnText.style.display = 'none';
+      if (btnLoader) btnLoader.style.display = 'inline-flex';
+      formFeedback.style.display = 'none';
+      formFeedback.className = 'form-feedback';
+
+      try {
+        const formData = new FormData(contactForm);
+
+        // Formspree AJAX submission: requires Accept: application/json
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+
+        if (response.ok) {
+          formFeedback.textContent = '✓ Thank you! Your message has been sent. We\'ll get back to you within 24 hours.';
+          formFeedback.className = 'form-feedback form-feedback--success';
+          formFeedback.style.display = 'block';
+          contactForm.reset();
+        } else {
+          const data = await response.json();
+          const errorMsg = data?.error || 'Something went wrong. Please try again later.';
+          formFeedback.textContent = '✗ ' + errorMsg;
+          formFeedback.className = 'form-feedback form-feedback--error';
+          formFeedback.style.display = 'block';
+        }
+      } catch (err) {
+        formFeedback.textContent = '✗ Network error. Please check your connection and try again.';
+        formFeedback.className = 'form-feedback form-feedback--error';
+        formFeedback.style.display = 'block';
+      } finally {
+        // Restore button state
+        submitBtn.disabled = false;
+        if (btnText) btnText.style.display = '';
+        if (btnLoader) btnLoader.style.display = 'none';
+      }
+    });
+  }
+
 });
