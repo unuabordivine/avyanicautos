@@ -1,5 +1,5 @@
 /* ============================================================
-   AVYANIC AUTOS — Main Script
+   AVYANNIC NIGERIA — Main Script
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
