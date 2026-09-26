@@ -59,37 +59,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 
-  // ----- SCROLL REVEAL (Intersection Observer) -----
-  const revealElements = document.querySelectorAll('.scroll-reveal');
+  // ----- STATS COUNT-UP (on load) -----
+  const statNumbers = document.querySelectorAll('.about-stat-number');
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
-      }
-    );
+  statNumbers.forEach(el => {
+    const raw = el.textContent.trim();
+    const match = raw.match(/^([\d.]+)(.*)$/);
+    if (!match) return;
 
-    revealElements.forEach(el => observer.observe(el));
-  } else {
-    // Fallback: show everything immediately
-    revealElements.forEach(el => el.classList.add('revealed'));
-  }
+    const target  = parseFloat(match[1]);
+    const suffix  = match[2];
+    const decimals = (match[1].split('.')[1] || '').length;
+    const duration = 1600;
+    const delay    = 500;
+
+    el.textContent = (0).toFixed(decimals) + suffix;
+
+    setTimeout(() => {
+      const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, delay);
+  });
 
   // ----- SMOOTH SCROLL FOR ANCHOR LINKS (enhancement) -----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       // Only prevent default if the href is just a hash-target on this page
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (targetId === '#') {
+        // Placeholder links (no target page yet) must not jump to the top
+        e.preventDefault();
+        return;
+      }
 
       const target = document.querySelector(targetId);
       if (target) {
@@ -106,18 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ----- PARALLAX-LIKE HERO TEXT SHIFT (subtle) -----
-  const heroContent = document.querySelector('.hero-content');
-
-  if (heroContent) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY;
-      if (scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.08}px)`;
-        heroContent.style.opacity = 1 - (scrolled / (window.innerHeight * 0.8));
-      }
-    }, { passive: true });
-  }
+  // (scroll-reveal animations removed — content is always visible)
 
   // ----- CONTACT FORM — EMAIL SUBMISSION (Formspree) -----
   const contactForm = document.getElementById('contactForm');

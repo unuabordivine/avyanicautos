@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avyannic Nigeria Limited — Automotive, Real Estate, Oil & Gas & General Merchandising</title>
   <meta name="description" content="Avyannic Nigeria Limited — a diversified company providing trusted services across automotive sales, real estate, oil & gas, and general merchandising." />
+  <meta name="theme-color" content="#0D4F4A" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230D4F4A'/%3E%3Cpath%20d='M56%2012%2028%2056h18l-6%2032%2030-46H50z'%20fill='%23C9A84C'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -16,17 +18,23 @@
   <!-- ========== NAVIGATION ========== -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="#" class="logo">
+      <a href="#hero" class="logo">
         <span class="logo-icon"><i class="fas fa-bolt"></i></span>
         <span class="logo-text">AVYANNIC NIGERIA LIMITED</span>
       </a>
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="#hero">Home</a></li>
+          <li><a href="#featured">Featured</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#sectors">Sectors</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li class="nav-cta">
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27d%20like%20to%20preorder%20a%20car." class="btn btn-sm btn-primary nav-preorder" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Preorder
+            </a>
+          </li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -39,8 +47,8 @@
   <section class="hero" id="hero">
     <div class="hero-bg">
       <picture>
-        <source srcset="https://images.unsplash.com/photo-1619767886558-efdc7b3af2a1?w=1920&q=80" media="(min-width: 1200px)" />
-        <source srcset="https://images.unsplash.com/photo-1619767886558-efdc7b3af2a1?w=1024&q=80" media="(min-width: 768px)" />
+        <source srcset="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80" media="(min-width: 1200px)" />
+        <source srcset="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1024&q=80" media="(min-width: 768px)" />
         <img src="download (5).jpg" alt="Avyannic Nigeria Limited" />
       </picture>
       <div class="hero-overlay"></div>
@@ -60,15 +68,118 @@
     </div>
   </section>
 
+  <!-- ========== FEATURED CARS ========== -->
+  <section class="section featured-cars" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Showroom</span>
+        <h2 class="section-title">Featured Cars</h2>
+        <p class="section-desc">Hand-picked vehicles from our current inventory — verified, inspected and ready for delivery.</p>
+      </div>
+      <div class="model-grid">
+
+        <article class="model-card">
+          <div class="model-card-image">
+            <img src="avalon.jpeg" alt="Toyota Avalon" loading="lazy" />
+            <div class="model-card-badge">Featured</div>
+          </div>
+          <div class="model-card-body">
+            <h3 class="model-name">Toyota Avalon</h3>
+            <p class="model-type"><i class="fas fa-location-dot"></i> Abuja, Nigeria</p>
+            <p class="model-price"><strong>₦26,000,000</strong></p>
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27m%20interested%20in%20the%20Toyota%20Avalon.%20Please%20send%20me%20more%20details." class="btn btn-sm btn-primary" target="_blank" rel="noopener">Contact Seller</a>
+          </div>
+        </article>
+
+        <article class="model-card">
+          <div class="model-card-image">
+            <img src="c300.jpeg" alt="Mercedes-Benz C300" loading="lazy" />
+            <div class="model-card-badge">Featured</div>
+          </div>
+          <div class="model-card-body">
+            <h3 class="model-name">Mercedes-Benz C300</h3>
+            <p class="model-type"><i class="fas fa-location-dot"></i> Abuja, Nigeria</p>
+            <p class="model-price"><strong>₦12,000,000</strong></p>
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20C300.%20Please%20send%20me%20more%20details." class="btn btn-sm btn-primary" target="_blank" rel="noopener">Contact Seller</a>
+          </div>
+        </article>
+
+        <article class="model-card">
+          <div class="model-card-image">
+            <img src="c400.jpeg" alt="Mercedes-Benz C400" loading="lazy" />
+            <div class="model-card-badge">Featured</div>
+          </div>
+          <div class="model-card-body">
+            <h3 class="model-name">Mercedes-Benz C400</h3>
+            <p class="model-type"><i class="fas fa-location-dot"></i> Abuja, Nigeria</p>
+            <p class="model-price"><strong>₦22,500,000</strong></p>
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20C400.%20Please%20send%20me%20more%20details." class="btn btn-sm btn-primary" target="_blank" rel="noopener">Contact Seller</a>
+          </div>
+        </article>
+
+        <article class="model-card">
+          <div class="model-card-image">
+            <img src="gle400.jpeg" alt="Mercedes-Benz GLE 400" loading="lazy" />
+            <div class="model-card-badge">Featured</div>
+          </div>
+          <div class="model-card-body">
+            <h3 class="model-name">Mercedes-Benz GLE 450</h3>
+            <p class="model-type"><i class="fas fa-location-dot"></i> Abuja, Nigeria</p>
+            <p class="model-price"><strong>₦69,500,000</strong></p>
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20GLE%20400.%20Please%20send%20me%20more%20details." class="btn btn-sm btn-primary" target="_blank" rel="noopener">Contact Seller</a>
+          </div>
+        </article>
+
+        <article class="model-card">
+          <div class="model-card-image">
+            <img src="gle43.jpeg" alt="Mercedes-Benz GLE 43" loading="lazy" />
+            <div class="model-card-badge">Featured</div>
+          </div>
+          <div class="model-card-body">
+            <h3 class="model-name">Mercedes-Benz GLC 43</h3>
+            <p class="model-type"><i class="fas fa-location-dot"></i> Abuja, Nigeria</p>
+            <p class="model-price"><strong>₦38,000,000</strong></p>
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20GLE%2043.%20Please%20send%20me%20more%20details." class="btn btn-sm btn-primary" target="_blank" rel="noopener">Contact Seller</a>
+          </div>
+        </article>
+
+        <article class="model-card">
+          <div class="model-card-image">
+            <img src="gle53.jpeg" alt="Mercedes-Benz GLE 53" loading="lazy" />
+            <div class="model-card-badge">Featured</div>
+          </div>
+          <div class="model-card-body">
+            <h3 class="model-name">Mercedes-Benz GLE 53</h3>
+            <p class="model-type"><i class="fas fa-location-dot"></i> Abuja, Nigeria</p>
+            <p class="model-price"><strong>₦117,000,000</strong></p>
+            <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20GLE%2053.%20Please%20send%20me%20more%20details." class="btn btn-sm btn-primary" target="_blank" rel="noopener">Contact Seller</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Preorder quick note -->
+      <div class="preorder-note">
+        <div class="preorder-note-title"><i class="fas fa-bolt"></i> How Preorder Works</div>
+        <ol class="preorder-steps">
+          <li><span>1</span> Pick your car &amp; tap Preorder on WhatsApp</li>
+          <li><span>2</span> Pay a deposit to lock it in</li>
+          <li><span>3</span> We ship &amp; deliver — balance on delivery</li>
+        </ol>
+        <a href="https://wa.me/2349150728505?text=Hello%20Avyannic%20Nigeria%20Limited%2C%20I%27d%20like%20to%20preorder%20a%20car." class="btn btn-sm btn-primary" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Start a Preorder</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== ABOUT ========== -->
   <section class="section about" id="about">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-label">About Us</span>
         <h2 class="section-title">A Legacy of Excellence Across Industries</h2>
         <p class="section-desc">Avyannic Nigeria Limited is a diversified company with deep expertise across four critical sectors of the economy.</p>
       </div>
-      <div class="about-grid scroll-reveal">
+      <div class="about-grid">
         <div class="about-text">
           <p>Founded on principles of integrity, innovation, and excellence, Avyannic Nigeria Limited has grown into a trusted name across multiple industries. We bring professional expertise, global standards, and local insight to every venture we undertake.</p>
           <p>From premium automotive sales to strategic real estate investments, from energy solutions to quality general merchandise — our diversified portfolio enables us to serve our clients with comprehensive, cross-sector solutions.</p>
@@ -128,18 +239,18 @@
   <!-- ========== SECTORS / FEATURED ========== -->
   <section class="section sectors" id="sectors">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-label">Our Sectors</span>
         <h2 class="section-title">Excellence Across Four Industries</h2>
         <p class="section-desc">Discover how Avyannic Nigeria Limited delivers value across automotive, real estate, energy, and merchandising.</p>
       </div>
 
       <!-- Sector 1: Vehicles -->
-      <div class="sector-block scroll-reveal">
+      <div class="sector-block">
         <div class="sector-header">
           <span class="sector-icon"><i class="fas fa-car"></i></span>
           <h3 class="sector-title">Featured Vehicles</h3>
-          <a href="#" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
+          <a href="#featured" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="sector-grid">
           <article class="model-card">
@@ -155,7 +266,7 @@
                 <li><i class="fas fa-gas-pump"></i> Petrol</li>
                 <li><i class="fas fa-couch"></i> 5 Seats</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Inquire Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Inquire Now</a>
             </div>
           </article>
           <article class="model-card">
@@ -171,7 +282,7 @@
                 <li><i class="fas fa-gas-pump"></i> Diesel</li>
                 <li><i class="fas fa-couch"></i> 7 Seats</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Inquire Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Inquire Now</a>
             </div>
           </article>
           <article class="model-card">
@@ -187,18 +298,18 @@
                 <li><i class="fas fa-gas-pump"></i> Petrol</li>
                 <li><i class="fas fa-couch"></i> 7 Seats</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Inquire Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Inquire Now</a>
             </div>
           </article>
         </div>
       </div>
 
       <!-- Sector 2: Real Estate -->
-      <div class="sector-block scroll-reveal">
+      <div class="sector-block">
         <div class="sector-header">
           <span class="sector-icon"><i class="fas fa-building"></i></span>
           <h3 class="sector-title">Featured Properties</h3>
-          <a href="#" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="sector-grid">
           <article class="model-card">
@@ -214,7 +325,7 @@
                 <li><i class="fas fa-bed"></i> 4 Beds</li>
                 <li><i class="fas fa-bath"></i> 3 Baths</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Inquire Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Inquire Now</a>
             </div>
           </article>
           <article class="model-card">
@@ -230,7 +341,7 @@
                 <li><i class="fas fa-bed"></i> 3 Beds</li>
                 <li><i class="fas fa-bath"></i> 2 Baths</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Inquire Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Inquire Now</a>
             </div>
           </article>
           <article class="model-card">
@@ -245,18 +356,18 @@
                 <li><i class="fas fa-location-dot"></i> Central Location</li>
                 <li><i class="fas fa-road"></i> Road Access</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Inquire Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Inquire Now</a>
             </div>
           </article>
         </div>
       </div>
 
       <!-- Sector 3: Oil & Gas -->
-      <div class="sector-block scroll-reveal">
+      <div class="sector-block">
         <div class="sector-header">
           <span class="sector-icon"><i class="fas fa-oil-well"></i></span>
           <h3 class="sector-title">Oil & Gas Solutions</h3>
-          <a href="#" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="sector-grid">
           <article class="model-card">
@@ -272,7 +383,7 @@
                 <li><i class="fas fa-fire"></i> Diesel</li>
                 <li><i class="fas fa-industry"></i> Kerosene</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Get a Quote</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Get a Quote</a>
             </div>
           </article>
           <article class="model-card">
@@ -288,7 +399,7 @@
                 <li><i class="fas fa-warehouse"></i> Storage Tanks</li>
                 <li><i class="fas fa-shield"></i> Safety Compliant</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Get a Quote</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Get a Quote</a>
             </div>
           </article>
           <article class="model-card">
@@ -303,18 +414,18 @@
                 <li><i class="fas fa-tools"></i> Repairs</li>
                 <li><i class="fas fa-hard-hat"></i> Consulting</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Get a Quote</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Get a Quote</a>
             </div>
           </article>
         </div>
       </div>
 
       <!-- Sector 4: General Merchandising -->
-      <div class="sector-block scroll-reveal">
+      <div class="sector-block">
         <div class="sector-header">
           <span class="sector-icon"><i class="fas fa-shopping-bag"></i></span>
           <h3 class="sector-title">General Merchandise</h3>
-          <a href="#" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="sector-view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="sector-grid">
           <article class="model-card">
@@ -330,7 +441,7 @@
                 <li><i class="fas fa-soap"></i> Hygiene</li>
                 <li><i class="fas fa-home"></i> Household</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Order Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Order Now</a>
             </div>
           </article>
           <article class="model-card">
@@ -346,7 +457,7 @@
                 <li><i class="fas fa-tools"></i> Equipment</li>
                 <li><i class="fas fa-box"></i> Packaging</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Order Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Order Now</a>
             </div>
           </article>
           <article class="model-card">
@@ -361,7 +472,7 @@
                 <li><i class="fas fa-warehouse"></i> Warehousing</li>
                 <li><i class="fas fa-tag"></i> Bulk Pricing</li>
               </ul>
-              <a href="#" class="btn btn-sm btn-primary">Order Now</a>
+              <a href="#contact" class="btn btn-sm btn-primary">Order Now</a>
             </div>
           </article>
         </div>
@@ -373,35 +484,35 @@
   <!-- ========== SERVICES ========== -->
   <section class="section services" id="services">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-label">Our Services</span>
         <h2 class="section-title">Comprehensive Solutions Across Sectors</h2>
         <p class="section-desc">From premium vehicles to energy solutions — we deliver excellence in every industry we serve.</p>
       </div>
       <div class="services-grid">
 
-        <div class="service-card scroll-reveal">
+        <div class="service-card">
           <div class="service-icon"><i class="fas fa-car"></i></div>
           <h3 class="service-title">Car Dealership</h3>
           <p class="service-text">Premium new and pre-owned vehicles with trusted customer service. From luxury sedans to rugged SUVs, we offer the finest automobiles with comprehensive after-sales support.</p>
           <a href="#sectors" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="service-card scroll-reveal">
+        <div class="service-card">
           <div class="service-icon"><i class="fas fa-building"></i></div>
           <h3 class="service-title">Real Estate</h3>
           <p class="service-text">Residential and commercial property sales, leasing, and investment opportunities. Expert guidance for buyers, sellers, and investors across prime locations.</p>
           <a href="#sectors" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="service-card scroll-reveal">
+        <div class="service-card">
           <div class="service-icon"><i class="fas fa-gas-pump"></i></div>
           <h3 class="service-title">Oil & Gas</h3>
           <p class="service-text">Energy solutions, petroleum product supply, logistics, and industry services. Reliable downstream operations serving commercial and industrial clients.</p>
           <a href="#sectors" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="service-card scroll-reveal">
+        <div class="service-card">
           <div class="service-icon"><i class="fas fa-store"></i></div>
           <h3 class="service-title">General Merchandising</h3>
           <p class="service-text">Supply and distribution of quality consumer and industrial products across various sectors. Reliable sourcing, competitive pricing, and timely delivery guaranteed.</p>
@@ -415,12 +526,12 @@
   <!-- ========== GALLERY ========== -->
   <section class="section gallery" id="gallery">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-label">Portfolio</span>
         <h2 class="section-title">Our Work in Focus</h2>
         <p class="section-desc">A glimpse into the quality and diversity of our operations across all sectors.</p>
       </div>
-      <div class="gallery-grid scroll-reveal">
+      <div class="gallery-grid">
         <a href="download (5).jpg" class="gallery-item gallery-item-1" data-lightbox="avyannic-gallery" target="_blank" rel="noopener">
           <img src="download (5).jpg" alt="Luxury Vehicle" loading="lazy" />
         </a>
@@ -446,13 +557,13 @@
   <!-- ========== CONTACT / LOCATION ========== -->
   <section class="section contact" id="contact">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-label">Contact Us</span>
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-desc">Have questions or ready to do business? Reach out to our team today.</p>
       </div>
       <div class="contact-grid">
-        <div class="contact-info scroll-reveal">
+        <div class="contact-info">
           <div class="contact-block">
             <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
             <div>
@@ -464,7 +575,7 @@
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div>
               <h4>Phone</h4>
-              <p><a href="tel:+2347040521112">(234) 09150728505</a></p>
+              <p><a href="tel:+2349150728505">(234) 09150728505</a></p>
             </div>
           </div>
           <div class="contact-block">
@@ -478,7 +589,7 @@
             <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
             <div>
               <h4>WhatsApp</h4>
-              <p><a href="http://wa.me/2349150728505" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
+              <p><a href="https://wa.me/2349150728505" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
             </div>
           </div>
           <div class="contact-block">
@@ -496,7 +607,7 @@
             </div>
           </div>
         </div>
-        <div class="contact-map scroll-reveal">
+        <div class="contact-map">
           <div class="map-wrapper">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.093531817618!2d7.440230200000002!3d9.0552329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b0007a5e75b%3A0x1cfdfb2cba3db94b!2sH%20%26A%20plaza!5e0!3m2!1sen!2sng!4v1783529024289!5m2!1sen!2sng"
@@ -511,12 +622,14 @@
           </div>
         </div>
       </div>
-      <!-- Contact form -- sends via Formspree -->
-      <div class="contact-form-wrapper scroll-reveal">
+      <!-- Contact form: sends via Formsubmit -->
+      <div class="contact-form-wrapper">
         <h3 class="form-title">Send Us a Message</h3>
         <p class="form-note">We'll get back to you within 24 hours.</p>
-        <!-- REPLACE the action URL below with your Formspree form endpoint -->
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE">
+        <!-- REPLACE the action URL below with your Formsubmit form endpoint -->
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/divineunuabor457@gmail.com" method="post">
+
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -546,42 +659,42 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <a href="#hero" class="logo">
             <span class="logo-icon"><i class="fas fa-bolt"></i></span>
             <span class="logo-text">AVYANNIC NIGERIA</span>
           </a>
           <p class="footer-tagline">We provide trusted services across automotive sales, real estate, oil & gas, and general merchandising.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/avyanicnic?igsh=OWZsMDNpMzVwMms4" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="http://wa.me/2349150728505" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/2349150728505" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="footer-links">
           <div class="footer-col">
             <h4>Our Sectors</h4>
             <ul>
-              <li><a href="#">Automotive</a></li>
-              <li><a href="#">Real Estate</a></li>
-              <li><a href="#">Oil & Gas</a></li>
-              <li><a href="#">Merchandising</a></li>
+              <li><a href="#sectors">Automotive</a></li>
+              <li><a href="#sectors">Real Estate</a></li>
+              <li><a href="#sectors">Oil & Gas</a></li>
+              <li><a href="#sectors">Merchandising</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Services</h4>
             <ul>
-              <li><a href="#">Vehicle Sales</a></li>
-              <li><a href="#">Property Leasing</a></li>
-              <li><a href="#">Petroleum Supply</a></li>
-              <li><a href="#">Wholesale Distribution</a></li>
+              <li><a href="#services">Vehicle Sales</a></li>
+              <li><a href="#services">Property Leasing</a></li>
+              <li><a href="#services">Petroleum Supply</a></li>
+              <li><a href="#services">Wholesale Distribution</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="#">About Us</a></li>
+              <li><a href="#about">About Us</a></li>
               <li><a href="#">Our Team</a></li>
               <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
